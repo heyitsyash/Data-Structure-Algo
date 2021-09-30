@@ -13,7 +13,7 @@ public class KadanesAlgo {
             arr[i] = sc.nextInt();
         }
 
-
+        //System.out.println(largestSum(arr,n));
         System.out.println(kadensLargestSum(arr,n));
     }
 
