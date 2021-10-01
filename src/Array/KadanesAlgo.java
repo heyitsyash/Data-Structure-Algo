@@ -19,7 +19,7 @@ public class KadanesAlgo {
 
     //Broot Force ALgo
     static int largestSum(int arr[], int n){
-        int maxSum = -1000000000;
+        int maxSum = Integer.MIN_VALUE;
         for (int i=0; i<n; i++){      //traversing through the loop and checking every possible sub arrays
             int sum =0;
             for (int j =i; j<n ;j++){ // checking test cases for index j

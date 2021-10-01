@@ -22,6 +22,7 @@ public class RotateArray {
 
     }
 
+
     static void rotateArray(int arr[], int n) {
 
         int hold = arr[n-1]; //keeping last element
