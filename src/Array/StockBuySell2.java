@@ -18,6 +18,8 @@ public class StockBuySell2 {
         System.out.println(maxProfit(arr,n));
     }
 
+    //our approach is to linear traverse the array and check if the curr index(sell) is greater than previous(buy)
+    //then just add the profit(buy - sell)
     static int maxProfit(int arr[], int n){
 
         int max_profit = 0;
