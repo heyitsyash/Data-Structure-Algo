@@ -19,6 +19,9 @@ public class FindElement2D {
             }
         }
 
+        int n = sc.nextInt();
+
+
         int number = sc.nextInt();
 
         for (int i=0; i<rows;i++){
