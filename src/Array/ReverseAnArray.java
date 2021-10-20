@@ -31,16 +31,6 @@ public class ReverseAnArray {
 
     }
 
-    // ITERATIVE METHOD FOR STRING
-    private static void reverseString(String str) {
-
-
-        char[] strArray = str.toCharArray();
-
-        for (int i = strArray.length - 1; i >= 0; i--) {
-            System.out.print(strArray[i]);
-        }
-    }
 
     //ITERATIVE FUNCTION
     //we move from left index and right index and swap them
