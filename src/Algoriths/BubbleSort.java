@@ -13,28 +13,40 @@ public class BubbleSort {
             arr[i] = sc.nextInt();
         }
 
-        sortArray(arr,n);
+        sortAnArray(arr, n);
 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
     }
 
+    // ANOTHER METHOD
     static void sortArray(int arr[], int n) {
         for (int i = n - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, arr[j], arr[j + 1]);
+                    swap(arr, j, j + 1);
                 }
             }
         }
 
     }
 
-    static void swap(int arr[], int i, int j) {
-        int temp = 0;
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    static void sortAnArray(int arr[], int n) {
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                }
+            }
+        }
+
+    }
+
+    static void swap(int arr[], int m, int n) {
+        //  int temp = 0;
+        int temp = arr[m];
+        arr[m] = arr[n];
+        arr[n] = temp;
     }
 }
