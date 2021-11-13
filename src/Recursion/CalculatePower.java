@@ -2,6 +2,7 @@ package Recursion;
 
 import java.util.Scanner;
 
+//QUES Print x^n (with stack height = n)
 public class CalculatePower {
 
     public static void main(String[] args) {
