@@ -13,7 +13,7 @@ public class CheckArrayIsSorted {
     static boolean isSorted(int arr[], int index) {
 
         //base case is same
-        if (index == arr.length - 1) {
+        if (index == arr.length - 1) { //if we reached the end of the array means the array is sorted
             return true;
         }
 
