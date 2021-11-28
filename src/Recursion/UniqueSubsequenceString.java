@@ -14,7 +14,7 @@ public class UniqueSubsequenceString {
     static void uniqueSubsequence(String str, int idx, String newString, HashSet<String> set) {
 
         if (idx == str.length()) {
-            if (set.contains(newString)) { //if it already contains the char
+            if (set.contains(newString)) { //if it already contains the character
                 return;
             } else {
                 System.out.println(newString); //if not then print
