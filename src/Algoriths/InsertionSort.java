@@ -22,7 +22,7 @@ public class InsertionSort {
 
     }
 
-    //letting i=0 the sorted array and starting from i=1 ... n the sorted array then moving from i-1... 0 and
+    //letting i=0 the sorted array and starting from i=1 ... n the unsorted array then moving from i-1... 0 and
     // checking if the element is >=0 && it is also greater the temp then right shift the element and  j--
     //if the inner loop breaks than put the value of temp in j+1
 
