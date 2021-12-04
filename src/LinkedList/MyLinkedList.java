@@ -1,12 +1,12 @@
 package LinkedList;
 
-public class LinkList {
+public class MyLinkedList {
 
     //everytime while creating the new list the head is pointing to null
     Node head;
     private int size;
 
-    LinkList(){
+    MyLinkedList(){
         this.size =0;
     }
 
@@ -106,10 +106,27 @@ public class LinkList {
         System.out.println(size);
     }
 
+    public void reverse(){
+
+        //we take 3 pointers prev->null(initially) curr->head, and then we create temp->curr.next then we'll loop until curr!=null
+        //and when curr points to null we'll assign head to prev (last node)
+        Node curr = head;
+        Node prev = null;
+
+        while (curr != null){
+            Node temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        head = prev;
+
+    }
+
 
     public static void main(String[] args) {
 
-        LinkList ll = new LinkList();
+        MyLinkedList ll = new MyLinkedList();
         ll.addFirst("a");
         ll.addFirst("is");
         //ll.printList();
@@ -117,16 +134,24 @@ public class LinkList {
         ll.addLast("list");
         ll.addFirst("this");
 
-        ll.getSize();
+//        ll.getSize();
+//        ll.printList();
+//
+//        ll.deleteFirst();
+//        ll.printList();
+//
+//        ll.deleteLast();
+//        ll.printList();
+//
+//        ll.getSize();
+
+//        ll.printList();
+//        ll.reverse();
         ll.printList();
 
-        ll.deleteFirst();
+        ll.reverse();
         ll.printList();
 
-        ll.deleteLast();
-        ll.printList();
-
-        ll.getSize();
     }
 
 }
