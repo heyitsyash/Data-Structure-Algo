@@ -6,8 +6,8 @@ public class MyLinkedList {
     Node head;
     private int size;
 
-    MyLinkedList(){
-        this.size =0;
+    MyLinkedList() {
+        this.size = 0;
     }
 
     class Node {
@@ -88,32 +88,32 @@ public class MyLinkedList {
         }
 
         size--;
-        if(head.next == null){
+        if (head.next == null) {
             head = null;
             return;
         }
 
         Node secondLast = head;
 
-        while(secondLast.next.next != null){
+        while (secondLast.next.next != null) {
             secondLast = secondLast.next;
         }
 
-        secondLast.next =null;
+        secondLast.next = null;
     }
 
-    public void getSize(){
+    public void getSize() {
         System.out.println(size);
     }
 
-    public void reverse(){
+    public void reverse() {
 
         //we take 3 pointers prev->null(initially) curr->head, and then we create temp->curr.next then we'll loop until curr!=null
         //and when curr points to null we'll assign head to prev (last node)
         Node curr = head;
         Node prev = null;
 
-        while (curr != null){
+        while (curr != null) {
             Node temp = curr.next;
             curr.next = prev;
             prev = curr;
@@ -121,6 +121,20 @@ public class MyLinkedList {
         }
         head = prev;
 
+    }
+
+    public Node reverseRecursively(Node head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        Node newHead = reverseRecursively(head.next);
+        Node headNext = head.next;
+        headNext.next = head;
+        head.next = null;
+
+        return newHead;
     }
 
 
@@ -148,10 +162,7 @@ public class MyLinkedList {
 //        ll.printList();
 //        ll.reverse();
         ll.printList();
-
-        ll.reverse();
-        ll.printList();
-
+        ll.reverseRecursively(ll.head);
     }
 
 }
