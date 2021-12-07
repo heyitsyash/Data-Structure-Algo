@@ -57,16 +57,13 @@ public class DeleteNthNode {
 
         LinkedList<Integer> ll = new LinkedList<>();
 
-
         ll.add(2);
         ll.add(5);
         ll.add(3);
         ll.add(7);
         ll.add(9);
 
-
     }
-
 }
 
 
