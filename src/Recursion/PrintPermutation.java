@@ -22,7 +22,7 @@ public class PrintPermutation {
 
             String newString = str.substring(0, i) + str.substring(i + 1); //here we get the char before and after that currChar -> a + c
 
-            printPermutation(newString, permutation + currChar); //now we again call the fun for newString(bc) and permu(a)
+            printPermutation(newString, permutation + currChar); //now we again call the fun for newString(ac) and permu(b)
             //which will again find the comb for bc and put the first char again in permutation
         }
     }
