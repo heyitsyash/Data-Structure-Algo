@@ -44,6 +44,7 @@ public class QuickSort {
     //in case i cross the j then we break out of the outer loop then we just swap the j and lowest by this j is the index where pivot element is there and simply
     //return the j
 
+    //6 3 7 5 9 8
     static int partition(int arr[], int l,int h){
 
         int pivot = arr[l]; //letting 0 be the pivot
