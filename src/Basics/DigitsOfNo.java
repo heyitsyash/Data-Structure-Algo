@@ -16,8 +16,8 @@ public class DigitsOfNo {
         ArrayList arr = new ArrayList();
 
         while (result > 0) {
-            count = result % 10;
-            result = result / 10;
+            count = result % 10; //this returns the last no
+            result = result / 10; //this returns the no rather than the last no
             arr.add(count);
 
         }

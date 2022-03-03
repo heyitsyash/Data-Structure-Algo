@@ -15,7 +15,7 @@ public class PreviousSmallerElement {
         nextSmaller(arr);
 
     }
-    //logic -> we'll loop through ar and for every element we'll check if arr is not empty and the previous element is greater
+    //logic -> we'll loop through ar and for every element we'll check if stack is not empty and the previous element is greater
     //then we'll remove that element from the stack and then check for empty(return -1) if not then the element on the top
     //is the previous smaller and then print element and push the ith elem on the stack
     public static void previousSmaller(int arr[]) {
