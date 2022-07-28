@@ -2,7 +2,7 @@ package Array;
 
 import java.util.Scanner;
 //QUES https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
-
+ //MAX SUM SUBARRAY
 public class KadanesAlgo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -33,10 +33,10 @@ public class KadanesAlgo {
 
     }
 
-    //Kadane's Algo
+    //Kadane's Algo {2,-1,3,-2,7}
     static int kadensLargestSum(int arr[], int n){
         int cuurSum =0;
-        int maxxSum =0;
+        int maxxSum =arr[0];
 
         for (int i=0; i<n ;i++){  //traversing through loop in linear fashion
             cuurSum+= arr[i]; // adding elements from starting index

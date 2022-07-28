@@ -1,10 +1,12 @@
 package LinkedList;
 
+import java.util.LinkedList;
+
 //QUES https://leetcode.com/problems/palindrome-linked-list/submissions/
 //for complete ques refer this
 public class PalindromeLinkedList {
 
-    class ListNode {
+   static class ListNode {
         int val;
         ListNode next;
 
@@ -14,7 +16,7 @@ public class PalindromeLinkedList {
         }
     }
 
-    class Solution {
+   static class Solution {
 
         //same as MyLinkedList class
         public ListNode reverse(ListNode head){
@@ -40,7 +42,7 @@ public class PalindromeLinkedList {
             ListNode rabbit = head;
             ListNode turtle = head;
 
-            while(rabbit.next != null && rabbit.next.next !=null){
+            while(rabbit.next != null && rabbit !=null){
                 rabbit = rabbit.next.next;
                 turtle = turtle.next;
             }
@@ -76,4 +78,21 @@ public class PalindromeLinkedList {
 
         }
     }
+
+//    public static void main(String[] args) {
+//
+//        MyLinkedList ll = new MyLinkedList();
+//
+//       ll.addLast("A");
+//       ll.addLast("b");
+//       ll.addLast("c");
+//       ll.addLast("b");
+//       ll.addLast("A");
+//
+//        Solution sol = new Solution();
+//
+//        System.out.println(sol.isPalindrome(ll.head);
+//
+//
+//    }
 }
