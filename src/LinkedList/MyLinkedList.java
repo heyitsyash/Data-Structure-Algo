@@ -1,10 +1,12 @@
 package LinkedList;
 
+import java.util.LinkedList;
+
 public class MyLinkedList {
 
     //everytime while creating the new list the head is pointing to null
     Node head;
-    private int size;
+    private  int size;
 
     MyLinkedList() {
         this.size = 0;
@@ -162,7 +164,17 @@ public class MyLinkedList {
 //        ll.printList();
 //        ll.reverse();
         ll.printList();
-        ll.reverseRecursively(ll.head);
+        System.out.println(ll.size);
+        //ll.reverseRecursively(ll.head);
+
+        LinkedList<Integer> l = new LinkedList<>();
+        l.add(5);
+        l.add(4);
+        l.add(4);
+        l.add(4);
+        l.add(4);
+
+        System.out.println(l.get(0));
     }
 
 }
