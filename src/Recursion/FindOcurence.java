@@ -27,11 +27,11 @@ public class FindOcurence {
         }
 
         if(str.charAt(index) == element){ //if char in the string is == element
-            if(first == -1){ //if the first is not changed yet means we haven't  find the first occurence
+            if(first == -1) { //if the first is not changed yet means we haven't  find the first occurence
                 first = index;
-            }else { //if first is updated then keep updating the last until we find the element in the String
+            } //if first is updated then keep updating the last until we find the element in the String
                 last = index;
-            }
+
         }
 
         printOccurence(str,index+1,element); //call the function for the next Index

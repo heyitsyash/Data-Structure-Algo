@@ -10,7 +10,7 @@ public class TowerOfHanoi {
         int n = sc.nextInt();
 
 
-        movingDisks(3, "src", "help", "dest");
+        movingDisks(n, "src", "help", "dest");
 
     }
 
@@ -18,11 +18,11 @@ public class TowerOfHanoi {
     public static void movingDisks(int n, String src, String helper, String dest) {
 
         if (n == 1) { //base case -> if only 1 disk is there
-            System.out.println("transfer disk " + n + " from " + src + " to " + dest);
+            System.out.println("transfer disk " + n + " from " + src + " to " + dest + "*");
             return;
         }
         movingDisks(n - 1, src, dest, helper); //using help disk to move the n-1 disk to help
-        System.out.println("transfer disk " + n + " from " + src + " to " + dest); // the moving the nth disk to dest
+        System.out.println("transfer disk " + n + " from " + src + " to " + dest ); // the moving the nth disk to dest
         movingDisks(n - 1, helper, src, dest);//then again moving disk from help to dest using src as a helper
 
         //and recursively calling themselves
